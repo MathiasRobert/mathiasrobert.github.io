@@ -5,8 +5,14 @@
     </i>
     <div class="details">
       <h3>
-        <slot name="heading"></slot>
+        <slot name="job-tile"></slot>
       </h3>
+      <h4>
+        <slot name="company"></slot>
+      </h4>
+      <h5>
+        <slot name="time"></slot>
+      </h5>
       <slot></slot>
     </div>
   </div>
@@ -15,29 +21,38 @@
 <style scoped>
 .item {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   position: relative;
+  flex-direction: column;
 }
 
 .details {
   flex: 1;
-  margin-left: 1rem;
 }
 
 i {
   display: flex;
   place-items: center;
   place-content: center;
-  width: 32px;
-  height: 32px;
+  width: 128px;
+  margin-bottom: 1rem;
 
   color: var(--color-text);
 }
 
 h3 {
-  font-size: 1.2rem;
   font-weight: 500;
-  margin-bottom: 0.4rem;
+  color: var(--color-heading);
+}
+
+h4 {
+  font-weight: 400;
+  color: var(--color-heading);
+}
+
+h5 {
+  font-weight: 300;
   color: var(--color-heading);
 }
 
@@ -45,35 +60,37 @@ h3 {
   .item {
     margin-top: 0;
     padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
+    flex-direction: row;
+    margin-left: 40px;
   }
 
   i {
-    top: calc(50% - 25px);
-    left: -26px;
+    top: calc(50% - 64px);
+    left: calc(-64px - 32px);
     position: absolute;
     border: 1px solid var(--color-border);
     background: var(--color-background);
     border-radius: 8px;
-    width: 50px;
-    height: 50px;
+    width: 128px;
+    height: 128px;
   }
 
   .item:before {
     content: ' ';
     border-left: 1px solid var(--color-border);
     position: absolute;
-    left: 0;
-    bottom: calc(50% + 25px);
-    height: calc(50% - 25px);
+    left: -32px;
+    bottom: calc(50% + 64px);
+    height: calc(50% - 64px);
   }
 
   .item:after {
     content: ' ';
     border-left: 1px solid var(--color-border);
     position: absolute;
-    left: 0;
-    top: calc(50% + 25px);
-    height: calc(50% - 25px);
+    left: -32px;
+    top: calc(50% + 64px);
+    height: calc(50% - 64px);
   }
 
   .item:first-of-type:before {
