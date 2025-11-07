@@ -39,8 +39,13 @@ import IconCloudflare from '@/components/icons/IconCloudflare.vue'
       <template #company> Les Ripeurs </template>
       <template #time> October 2020 - July 2023 - Paris, France </template>
       - Development from scratch, maintenance, and enhancements of the main web/mobile application
-      for Les Ripeurs - Angular, Capacitor, i18n.<br />
-      - Internal applications and website development - Angular, Vuejs, React, AppGyver<br />
+      for Les Ripeurs - Angular, Capacitor, i18n.
+      <a href="https://lesripeurs.app" target="_blank">https://lesripeurs.app</a><br />
+      - Internal applications and website development - Angular, Vuejs (<a
+        href="https://www.lesripeurs.com/"
+        target="_blank"
+        >https://www.lesripeurs.com/</a
+      >), React, AppGyver<br />
       - Occasional interventions on the backend in Node.js<br />
       - Development of tools and automations for various internal teams using No-code/Low-code
       platforms (Integromat/Make, AppGyver, Zapier).<br />
